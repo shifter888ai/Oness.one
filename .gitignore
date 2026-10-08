@@ -1,0 +1,11 @@
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# The five linked Windows downloads are staged outside Git pending review
+/chinese/western/灵修精品系列/灵修精品系列一.exe
+/chinese/western/灵修精品系列/灵修精品系列二.exe
+/chinese/western/灵修精品系列/灵修精品系列三.exe
+/chinese/western/灵修精品系列/灵修精品系列四.exe
+/chinese/western/灵修精品系列/灵修精品系列五.exe

@@ -1,0 +1,300 @@
+BODY {
+	color: #000033;
+}
+
+A:LINK  {
+	color:  #0000ff;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+A:VISITED {
+	color: #000099;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+A:ACTIVE {
+	color: Red;
+	text-decoration: underline;
+	background-color: transparent;
+}
+
+A:HOVER {
+	color: #CC0066;
+	text-decoration: underline;
+	background-color: transparent;
+}
+
+H1 {
+	color: #44253E;
+	margin-bottom: 1ex;
+	text-align: center;
+	background-color: transparent;
+}
+
+H2 {
+	color: #4D2B4F;
+	margin-bottom: 1ex;
+	text-align: center;
+	background-color: transparent;
+}
+
+H3 {
+	color: #663366;
+	margin-top: 1.5ex;
+	margin-bottom: 1ex;
+	text-align: center;
+	background-color: transparent;
+}
+
+H4 {
+	color: #66005C;
+	margin-top: 1em;
+	margin-bottom: 1ex;
+	text-align: center;
+	background-color: transparent;
+}
+
+H5 {
+	color: #993366;
+	font-weight: 800;
+	margin-top: 1em;
+	margin-bottom: 1ex;
+	text-align: center;
+	background-color: transparent;
+}
+
+P {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+BLOCKQUOTE {
+	font-family: "Times New Roman", Times, serif;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: 11pt;
+}
+
+.caption {
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+.navbg {
+	background-color: #993366;
+}
+
+.here, .add, { 
+	color: Red;
+ }
+
+.tdhere { 
+	color: Red;
+	background-color: #ccffff
+ }
+
+.navbar {
+	margin-left: 10%;
+	margin-right: 10%;
+	border-width: thin;
+	border-color: #0099CC;
+	padding: 2em;
+	background-color: #F0F8FF;
+	font-weight: 600;
+}
+
+.contents {
+	font-size: 13pt;
+	margin-left: 15%;
+	margin-right: 5%;
+	margin-bottom: 2em;
+}
+
+.pagecontents {
+	font-size: 12pt;
+	font-weight: 700;
+	margin-left: 20%;
+	margin-right: 10%;
+	margin-bottom: 2em;
+}
+
+.booktitle {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.bookauthor {
+	font-weight: bold
+}
+
+.review {margin-left: 3em}
+
+.description {
+	font-family: "Times New Roman", Times, serif;
+	font-weight: normal;
+	font-size: 12pt;
+}
+
+.note, .notes {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+.summary, .definition, .info {
+	text-align: left;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	color: #4B0082;
+	background-color: #F0F8FF;
+	border-color: #CC99FF;
+	border-style: ridge;
+	border-width: thin;
+      padding: 2px;
+}
+
+.center { 
+	text-align: center 
+}
+
+.indent {
+	margin-left: 3em;
+}
+
+.best {
+	color: Red;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 80%;
+}
+
+.linkheader{
+	border-width: thin;
+	border-color: Aqua;
+	border-style: ridge;
+}
+
+.linkheading {
+	font-size: 14pt;
+	color: #0000ff;
+	font-weight: 500;
+	background-color: Aqua;
+}
+
+.bar {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	clear: both;
+}
+
+.textcaption {
+	font-size: small;
+	margin-left: 3em;
+	margin-right: 3em;
+}
+
+.main  {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	margin-left: 5em;
+	margin-right: 5em;
+	border-width: thin;
+	border-color: #990099;
+	border-style: ridge;
+	padding: 1ex;
+	color: black;
+	background-color: white;
+	font-weight: 600;
+	text-align: center;
+}
+
+.nodes  {
+	font-size: 13px;
+	border-width: thin;
+	border-color: #CCCC99;
+	border-style: ridge;
+	padding: 1ex;
+	background-color: #CCFFCC;
+	font-weight: 600;
+	margin-right: 50%;
+}
+
+.child  {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	margin-left: 2em;
+	margin-right: 2em;
+	border-width: thin;
+	border-color: #0000CC;
+	border-style: ridge;
+	padding: 1ex;
+	background-color: #ccffff;
+	font-weight: 600;
+}
+
+.seealso  {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin-left: 2em;
+	margin-right: 2em;
+	border-width: thin;
+	border-color: #ff00ff;
+	border-style: ridge;
+	padding: 1ex;
+	background-color: #ffcccc;
+	font-weight: 600;
+	text-align: center;
+}
+
+.parent  {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin-left: 5em;
+	margin-right: 5em;
+	border-width: thin;
+	border-color: #9900CC;
+	border-style: ridge;
+	padding: 1ex;
+	background-color: white;
+	color: #4B0082;
+	font-weight: 600;
+	text-align: center;
+}
+
+
+.disclaimer  {
+	font-weight: 600;	
+}
+
+.use {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 10pt;
+	font-weight: 500;
+}
+
+.feedback {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	text-align: center;	
+	margin-top: 1em;
+}
+
+.contactme {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	text-align: center;
+}
+
+.center { 
+	text-align: center 
+}
+
+.credits, author {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 10pt;
+	margin-left: 2em;
+	margin-right: 2em;
+}
+

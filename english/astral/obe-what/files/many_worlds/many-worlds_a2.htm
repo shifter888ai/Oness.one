@@ -1,0 +1,205 @@
+<html>
+
+<head><meta name="viewport" content="height=device-height,width=device-width">
+<meta http-equiv="Content-Language" content="ja">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>The Many</title>
+
+<!-- google-analytics.com  START  (aync)-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15825841-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- google-analytics.com  END  -->
+
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,1087503,4,0,150,30,00000000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+    var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+    hs.src = ('http://s10.histats.com/js15_as.js');
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+  })();</script>
+<noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?1087503&101" alt="free web page hit counter" border="0"></a></noscript>
+<!-- Histats.com  END  -->
+
+</head>
+
+<body>
+
+<p><font face="Arial" size="2"><b>A2 Quantum mechanics and Dirac notation </b> <br>
+------------------------------------<br>
+Note: this is a very inadequate guide. Read a more comprehensive text<br>
+ASAP. For a more technical exposition of QM the reader is referred to<br>
+the standard textbooks. Here are 3 I recommend:<br>
+<br>
+Richard P Feynman _QED: the strange story of light and matter_ ISBN 0-<br>
+14-012505-1. (Requires almost no maths and is universally regarded as<br>
+outstanding, despite being about quantum electrodynamics.)<br>
+<br>
+Richard P Feynman _The Feynman Lectures in Physics_ Volume III Addison-<br>
+Wesley (1965) ISBN 0-201-02118-8-P. The other volumes are worth reading<br>
+too!<br>
+<br>
+Daniel T Gillespie _A Quantum Mechanics Primer: An Elementary<br>
+Introduction to the Formal Theory of Non-relativistic Quantum Mechanics_ <br>
+(Takes an axiomatic, geometric approach and teaches all the Hilbert<br>
+space stuff entirely by analogy with Euclidean vector spaces. Not sure<br>
+if it is still in print.)<br>
+<br>
+Quantum theory is the most successful theory of physics and chemistry<br>
+ever. It accounts for a wide range of phenomena from black body<br>
+radiation, atomic structure and chemistry, which were very puzzling<br>
+before quantum mechanics was first developed (c1926) in its modern form. <br>
+All theories of physics are quantum physics, with whole new fields, like<br>
+the semiconductor and microchip technology, based upon the quantum<br>
+effects. This FAQ assumes familiarity with the basics of quantum theory<br>
+and with the associated &quot;paradoxes&quot; of wave-particle duality. It will<br>
+not explain the uncertainty principle or delve into the significance of<br>
+non-commuting matrix operators. Only those elements of quantum theory<br>
+necessary for an understanding of many-worlds are covered here.<br>
+<br>
+Quantum theory contains, as a central object, an abstract mathematical<br>
+entity called the &quot;wavefunction&quot; or &quot;state vector&quot;. Determining the<br>
+equations that describe its form and evolution with time is an<br>
+unfinished part of fundamental theoretical physics. Presently we only<br>
+have approximations to some &quot;correct&quot; set of equations, often referred<br>
+to whimsically as the Theory of Everything.<br>
+<br>
+The wavefunction, in bracket or Dirac notation, is written as |symbol&gt; ,<br>
+where &quot;symbol&quot; labels the object. A dog, for example, might be<br>
+represented as |dog&gt; .<br>
+<br>
+A general object, labelled &quot;psi&quot; by convention, is represented as |psi&gt; <br>
+and called a &quot;ket&quot;. Objects called &quot;bra&quot;s, written &lt; psi|, may be formed<br>
+from kets. An arbitrary bra &lt; psi'| and ket |psi&gt; may be combined<br>
+together to form the bracket, &lt; psi'|psi&gt; , or inner product, which is<br>
+just a fancy way of constructing a complex number. Amongst the<br>
+properties of the inner product is:<br>
+<br>
+&lt; psi'|(|psi1&gt; *a_1 + |psi2&gt; *a_2) = &lt; psi'|psi1&gt; *a_1 + &lt; psi'|psi2&gt; *a_2<br>
+<br>
+where the a_i are arbitrary complex numbers. This is what is meant by<br>
+saying that the inner product is linear on the right or ket side. It<br>
+is made linear on the left-hand or bra side by defining <br>
+<br>
+&lt; psi|psi'&gt; = complex conjugate of &lt; psi'|psi&gt; <br>
+<br>
+Any ket may be expanded as:<br>
+<br>
+|psi&gt; = sum |i&gt; *&lt; i|psi&gt; <br>
+i<br>
+= |1&gt; *&lt; 1|psi&gt; + |2&gt; *&lt; 2|psi&gt; + ...<br>
+where the states |i&gt; form an orthonormal basis, with &lt; i|j&gt; = 1 for i =<br>
+j and = 0 otherwise, and where i labels some parameter of the object<br>
+(like position or momentum).<br>
+<br>
+The probability amplitudes, &lt; i|psi&gt; , are complex numbers. It is<br>
+empirically observed, first noted by Max Born and afterwards called the<br>
+Born interpretation, that their magnitudes squared represent the<br>
+probability that, upon observation, that the value of the parameter,<br>
+labelled by i, will be observed if the system is the state represented<br>
+by |psi&gt; . It is also empirically observed that after observing the<br>
+system in state |i&gt; that we can henceforth replace the old value of the<br>
+wavefunction, |psi&gt; , with the observed value, |i&gt; . This replacement is<br>
+known as the collapse of the wavefunction and is the source of much<br>
+philosophical controversy. Somehow the act of measurement has selected<br>
+out one of the components. This is known as the measurement problem and<br>
+it was this phenomenon that Everett addressed.<br>
+<br>
+When a bra, &lt; psi|, is formed from a ket, |psi&gt; , and both are inner<br>
+productted together the result, &lt; psi|psi&gt; , is a non-negative real<br>
+number, called the norm of the vector. The norm of a vector provides<br>
+a basis-independent way of measuring the &quot;volume&quot; of the vector.<br>
+<br>
+The wavefunction for a joint system is built out of products of the<br>
+components from the individual subsystems. <br>
+<br>
+For example if the two systems composing the joint system are a cat and<br>
+a dog, each of which may be in two states, alive or dead, and the state<br>
+of the cat and the dog were *independent* of each other then we could<br>
+write the total wavefunction as a product of terms. If<br>
+|cat&gt; = |cat alive&gt; * c_a + |cat dead&gt; * c_d<br>
+and <br>
+|dog&gt; = |dog alive&gt; * d_a + |dog dead&gt; * d_d<br>
+then<br>
+|dog+cat&gt; = |cat&gt; x|dog&gt; where x = tensor product<br>
+= (|cat alive&gt; * c_a + |cat dead&gt; * c_d)<br>
+x (|dog alive&gt; * d_a + |dog dead&gt; * d_d)<br>
+= |cat alive&gt; x |dog alive&gt; * c_a * d_a <br>
++ |cat alive&gt; x |dog dead&gt; * c_a * d_d<br>
++ |cat dead&gt; x |dog alive&gt; * c_d * d_a<br>
++ |cat dead&gt; x |dog dead&gt; * c_d * d_d<br>
+= |cat alive, dog alive&gt; * c_a * d_a <br>
++ |cat alive, dog dead&gt; * c_a * d_d<br>
++ |cat dead, dog alive&gt; * c_d * d_a<br>
++ |cat dead, dog dead&gt; * c_d * d_d<br>
+<br>
+More generally, though, we states of subsystems are not independent of<br>
+each other we have to use a more general formula:<br>
+<br>
+|dog+cat&gt; = |cat alive, dog alive&gt; * a_1<br>
++ |cat alive, dog dead&gt; * a_2<br>
++ |cat dead, dog alive&gt; * a_3<br>
++ |cat dead, dog dead&gt; * a_4<br>
+<br>
+This is sometimes described by saying that the states of the cat and dog<br>
+have become entangled. It is fairly trivial to define the state of the<br>
+cat and the dog with respect to each other. For instance we could re-<br>
+express the above expansion with respect to the cat's two states as:<br>
+<br>
+|dog+cat&gt; = <br>
+|cat alive&gt; x(|dog alive&gt; * a_1 + |dog dead&gt; * a_2)<br>
++ |cat dead&gt; x(|dog alive&gt; * a_3 + |dog dead&gt; * a_4)<br>
+<br>
+We term the state of the dog the *relative state* (Everett invented this<br>
+terminology) with respect to the cat, specifying which cat state (alive<br>
+or dead) we are interested in. This thus the dog's relative state with<br>
+respect to the cat alive state is:<br>
+<br>
+(|dog alive&gt; * a_1 + |dog dead&gt; * a_2)/sqrt(|a_1|^2 + |a_2|^2)<br>
+<br>
+where the sqrt term has been added to normalise the relative state.<br>
++ |cat alive, dog dead&gt; * a_2<br>
++ |cat dead, dog alive&gt; * a_3<br>
++ |cat dead, dog dead&gt; * a_4<br>
+<br>
+This is sometimes described by saying that the states of the cat and dog<br>
+have become entangled. It is fairly trivial to define the state of the<br>
+cat and the dog with respect to each other. For instance we could re-<br>
+express the above expansion with respect to the cat's two states as:<br>
+<br>
+|dog+cat&gt; = <br>
+|cat alive&gt; x(|dog alive&gt; * a_1 + |dog dead&gt; * a_2)<br>
++ |cat dead&gt; x(|dog alive&gt; * a_3 + |dog dead&gt; * a_4)<br>
+<br>
+We term the state of the dog the *relative state* (Everett invented this<br>
+terminology) with respect to the cat, specifying which cat state (alive<br>
+or dead) we are interested in. This thus the dog's relative state with<br>
+respect to the cat alive state is:<br>
+<br>
+(|dog alive&gt; * a_1 + |dog dead&gt; * a_2)/sqrt(|a_1|^2 + |a_2|^2)<br>
+<br>
+where the sqrt term has been added to normalise the relative state.</font></p>
+
+<p>&nbsp;</p>
+<p><font face="Arial" size="2">Source:
+<a href="http://www.anthropic-principle.com/preprints/manyworlds.html">
+http://www.anthropic-principle.com/preprints/manyworlds.html</a></font></p>
+
+</body>
+
+</html>

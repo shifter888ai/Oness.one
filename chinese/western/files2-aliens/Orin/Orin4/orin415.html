@@ -1,0 +1,484 @@
+<html>
+
+
+<!-- Mirrored from www.shuimo.com/orin/Orin4/orin415.htm by HTTrack Website Copier/3.x [XR&CO'2006], Thu, 07 Sep 2006 14:06:37 GMT -->
+<head><meta name="viewport" content="height=device-height,width=device-width">
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>第三篇 向外扩展</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:PMingLiU;
+	panose-1:2 2 3 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:MingLiU;
+	panose-1:2 2 3 9 0 0 0 0 0 0;}
+@font-face
+	{font-family:楷体_GB2312;
+	panose-1:2 1 6 9 3 1 1 1 1 1;}
+@font-face
+	{font-family:新宋体-18030;
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:DFKai-SB;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@楷体_GB2312";
+	panose-1:2 1 6 9 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@MingLiU";
+	panose-1:2 2 3 9 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@PMingLiU";
+	panose-1:2 2 3 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@新宋体-18030";
+	panose-1:2 1 6 9 6 1 1 1 1 1;}
+@font-face
+	{font-family:"Arial Narrow";
+	panose-1:2 11 5 6 2 2 2 3 2 4;}
+@font-face
+	{font-family:"華康楷書體W7\(P\)";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:華康隸書體W7;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:波波中仿宋;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@華康隸書體W7";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@華康楷書體W7\(P\)";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@DFKai-SB";}
+@font-face
+	{font-family:"\@波波中仿宋";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Arial Narrow";
+	color:blue;}
+h3
+	{margin-top:13.0pt;
+	margin-right:0cm;
+	margin-bottom:13.0pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:173%;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Arial Narrow";
+	color:blue;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	layout-grid-mode:char;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Arial Narrow";
+	color:blue;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	text-autospace:none;
+	font-size:10.5pt;
+	font-family:宋体;
+	color:blue;}
+p
+	{margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.1, li.1, div.1
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:"Arial Narrow";
+	color:blue;
+	font-weight:bold;}
+p.a, li.a, div.a
+	{margin-top:5.0pt;
+	margin-right:0cm;
+	margin-left:0cm;
+	text-align:left;
+	line-height:12.0pt;
+	font-size:12.0pt;
+	font-family:宋体;
+	font-weight:bold;}
+p.2, li.2, div.2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:left;
+	text-autospace:none;
+	font-size:24.0pt;
+	font-family:"Arial Narrow";
+	color:blue;}
+p.a0, li.a0, div.a0
+	{margin-top:15.6pt;
+	margin-right:0cm;
+	margin-left:0cm;
+	text-align:left;
+	font-size:14.0pt;
+	font-family:楷体_GB2312;
+	font-weight:bold;}
+p.3, li.3, div.3
+	{margin-top:15.6pt;
+	margin-right:0cm;
+	margin-left:0cm;
+	text-align:left;
+	font-size:14.0pt;
+	font-family:新宋体-18030;
+	font-weight:bold;}
+p.4, li.4, div.4
+	{margin-top:15.6pt;
+	margin-right:0cm;
+	margin-left:0cm;
+	text-align:left;
+	font-size:14.0pt;
+	font-family:宋体;
+	font-weight:bold;}
+p.5, li.5, div.5
+	{margin-top:15.6pt;
+	margin-right:0cm;
+	margin-left:0cm;
+	text-align:left;
+	font-size:15.0pt;
+	font-family:宋体;
+	font-weight:bold;}
+p.66, li.66, div.66
+	{margin-top:15.6pt;
+	margin-right:0cm;
+	margin-left:0cm;
+	text-align:left;
+	font-size:15.0pt;
+	font-family:宋体;
+	font-weight:bold;}
+p.a1, li.a1, div.a1
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-autospace:none;
+	font-size:20.0pt;
+	font-family:PMingLiU;
+	font-weight:bold;}
+p.a2, li.a2, div.a2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-autospace:none;
+	font-size:18.0pt;
+	font-family:華康隸書體W7;
+	font-weight:bold;}
+p.a3, li.a3, div.a3
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:24.0pt;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:PMingLiU;}
+p.a4, li.a4, div.a4
+	{margin-top:9.3pt;
+	margin-right:0cm;
+	margin-bottom:9.3pt;
+	margin-left:0cm;
+	text-align:center;
+	text-autospace:none;
+	font-size:13.0pt;
+	font-family:"華康楷書體W7\(P\)";}
+p.a5, li.a5, div.a5
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-autospace:none;
+	font-size:18.0pt;
+	font-family:DFKai-SB;
+	font-weight:bold;}
+p.a6, li.a6, div.a6
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	text-autospace:none;
+	font-size:14.0pt;
+	font-family:PMingLiU;
+	font-weight:bold;}
+p.10, li.10, div.10
+	{margin-top:18.65pt;
+	margin-right:0cm;
+	margin-bottom:9.3pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:PMingLiU;}
+p.a7, li.a7, div.a7
+	{margin-top:9.3pt;
+	margin-right:0cm;
+	margin-bottom:9.3pt;
+	margin-left:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:PMingLiU;
+	font-weight:bold;}
+p.a8, li.a8, div.a8
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.3pt;
+	margin-left:34.95pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-16.95pt;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:PMingLiU;}
+p.a9, li.a9, div.a9
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:9.3pt;
+	margin-left:60.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-24.0pt;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:波波中仿宋;}
+ /* Page Definitions */
+ @page Section1
+	{size:419.6pt 21.0cm;
+	margin:59.55pt 57.85pt 59.55pt 57.55pt;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.Section2
+	{page:Section2;}
+-->
+</style>
+
+
+<!-- google-analytics.com  START  (aync)-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-15825841-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- google-analytics.com  END  -->
+
+ <!-- Histats.com  START  (aync)-->
+<script type="text/javascript">
+var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,1087503,4,0,150,30,00000000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+    var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+    hs.src = ('http://s10.histats.com/js15_as.js');
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+  })();
+  </script>
+<noscript><a href="http://www.histats.com" target="_blank">
+<img  src="http://sstatic1.histats.com/0.gif?1087503&101" alt="best counter" border="0"></a>
+</noscript>
+<!-- Histats.com  END  -->
+
+</head>
+
+<body lang=ZH-CN style='text-justify-trim:punctuation'>
+
+<div class=Section1>
+
+<p class=a2 style='margin-top:12.0pt'><span style='font-size:14.0pt;font-family:
+宋体'>第三篇</span></p>
+
+<p class=a2><span lang=EN-US style='font-size:14.0pt'>&nbsp;</span></p>
+
+<p class=a2><span style='font-family:宋体'>向外扩展</span></p>
+
+<p class=a2><i><span lang=EN-US style='font-size:14.0pt;font-family:"Times New Roman"'>Expanding
+Outward</span></i></p>
+
+<p class=a2><span lang=EN-US style='font-family:"Times New Roman"'>&nbsp;</span></p>
+
+<p class=a4><span style='font-family:宋体'>成为光源</span></p>
+
+<p class=a4><span style='font-family:宋体'>从服务迈向开悟</span></p>
+
+<p class=a4><span style='font-family:宋体'>揭开幻觉的面纱</span></p>
+
+<p class=a4><span style='font-family:宋体'>以你的大我进行沟通</span></p>
+
+<p class=a4><span style='font-family:宋体'>正确运用意志</span></p>
+
+<p class=a4><span style='font-family:宋体'>释放执着</span></p>
+
+<p class=a4><span style='font-family:宋体'>变成透明</span></p>
+
+<p class=a1><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+<b><span lang=EN-US style='font-size:20.0pt;font-family:PMingLiU'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<div class=Section2 style='layout-grid:15.6pt'>
+
+<p class=a1><span lang=EN-US>15</span></p>
+
+<p class=a2><span style='font-family:宋体'>成为光源</span></p>
+
+<p class=a2><i><span lang=EN-US style='font-size:14.0pt;font-family:"Times New Roman"'>Becoming
+a Source of Light</span></i></p>
+
+<p class=a2><span lang=EN-US style='font-family:"Times New Roman"'>&nbsp;</span></p>
+
+<p class=a3><span style='font-family:宋体'>你们是治疗师、教师，和引导者。你们到此传播新的讯息、观念、治疗的工具和爱给你们投入的每个地方。你们将会投入许多领域的工作，因为新意识需要带进社会的每个角落。当你灵性成长、唤起内在光芒，你将会成为唤醒他人的光源。</span></p>
+
+<p class=a3><span style='font-family:宋体'>在你选择出生之前，你：就是大我，存在于光的较高次元。为了生活在这个星球，你的大我首先创造灵性体，以此为蓝图组成脉轮、经络和能量系统，然后大我聚集心智体、情绪体和身体等能量体到你的灵性体。</span></p>
+
+<p class=a3><span style='font-family:宋体'>想象当你穿着层层的衬衫、裤子和袜子，再加上数件厚毛衣与外套，你会觉得如何？这就是你的大我进入身体的感受；有时你会感觉如此沉重！当你的灵魂离开身体，它脱去外壳回到大我无形的本质中。</span></p>
+
+<p class=a3><span style='font-family:宋体'>由于你们来自灵性与光的较高次元，很多人因而感觉难以生活在地球的物质世界。有些人并不完全融入身体，反而喜欢在精神世界。可能你希望自己可以愈快速愈轻易的心想事成，这是由于你残留模糊的较高次元记忆。在较高次元你可以立即创造你任何想到的事物。</span></p>
+
+<p class=a3><span style='font-family:宋体'>如同你的大我，你拥有广阔志同道合的朋友，一起迈向更高目的。很多人结成灵魂群一同来到地球，当你们相遇时可能感觉一见如故而认出彼此。你们之中有些人已经在地球上工作许多世、有些人最近才来，你们被吸引到地球是因为有更多的机会可以提供你们带来光、治愈，和教导帮助他人，让你们的大我成长、更明亮。</span></p>
+
+<p class=a3><span style='font-family:宋体'>你的大我明白离开精微明晰而能量调和的高次元，进入地球混乱的物质世界需要非常大的勇气。你的大我想要学习将本身精微的能量带入地球日常生活中，而获得成长。你的大我认为学习在地球的能量乱流中，保持自己稳定的光，将有助于大幅增进大我的成长和绽放光。</span></p>
+
+<p class=a3><span style='font-family:宋体'>许多人仍保有在高次元中得到持续的爱与支持的微弱记忆。有时当自己的童年感到艰苦，因而觉得不被了解、不受欣赏。也可能让你觉得这个世界应该更有意义、更合理，而且人们不必要陷入痛苦和混乱中。你可能希望让别人感觉很好，而努力取悦周围的每个人。可能「感应」他人的情绪而经常迷失在他们的感受中，忘了自己是谁。或者背负起他人的痛苦与负担，试图帮他们解除困难。</span></p>
+
+<p class=a3><span style='font-family:宋体'>你可能选择了艰苦的童年，因为你知道如此可以发展自己强健的特质以助你达成人生目的。即使当别人不肯定你，你仍然可以信任自己，得到成长的机会。不需要外在的肯定有助于自己更独立和自给自足，能够发现自己的方向，不需要依赖他人。帮助你更能体察别人的经验，发展慈悲心。</span></p>
+
+<p class=a3><span style='font-family:宋体'>在你的童年，你并不是完全孤立、不被认同。你的父母以对自己肯定的方式肯定你。而且有许多高灵自愿以老师或其它可以接触儿童的身份围绕在你们身边，为你播下成长的种子。你可能记得某位老师或年长的朋友，曾经对你产生重大的影响。</span></p>
+
+<p class=a3><span style='font-family:宋体'>由于很多现在的儿童是进化的古老灵魂，许多高灵在此扮演母亲、父亲、学校老师或保姆的角色。他们明白只言词组的鼓励、肯定与关心能够唤醒孩子们迈向生命目标的光芒，增益他们的人生。</span></p>
+
+<p class=a3><span style='font-family:宋体'>你的内在明白自己的强大，和无论多么艰难的处境，自己都能发现转化的途径。首要之务是治愈自己，因为你们大部分来自远比地球平静的振动和能量中。不要怪罪自己感到怀疑、悲伤、恐惧或罪恶感。明白这是当前人类进化阶段中，伴随肉体的感受。</span></p>
+
+<p class=a3><span style='font-family:宋体'>你可能选择个别体验诸如恐惧或怀疑等人类尚未完全超越的感受，而明白自己转化它们的方法将可以分享帮助他人。你在各方面提升自己的振动，都可以协助他人更容易提升类似的部分。你的选择可以在心电感应和能量层面提供予他人。当你爱自己、表达智慧或慈悲心，即是利益全人类。</span></p>
+
+<p class=a3><span style='font-family:宋体'>你知道自己处在地球发生许多变动之时。事实上，在你一生中将比历史上其它时期发生更多的主要变动。例如，人口急遽膨胀，导致社会和文化结构必须快速调整。</span></p>
+
+<p class=a3><span style='font-family:宋体'>你是新时代的建造者；你在此协助他人的转化。你可以从扩展意识、自我疗愈和实践终生志业为起点。</span></p>
+
+<p class=a3><span style='font-family:宋体'>扰乱的变动时期，提供很大的成长契机。你可以试想飞行的小鸟，没有气流将更难飞行。如同那只小鸟，你只需要适度的转变：改变－扰动－成长。许多人在自己面临危机或改变时，开始积极寻求灵性成长。虽然不必要藉由危机获致成长，很多人却是当老方法已不可行或情况混乱时，才愿意改变。</span></p>
+
+<p class=a4><span style='font-family:宋体'>从小你可能觉得自己有个特别的目的或任务</span></p>
+
+<p class=a3><span style='font-family:宋体'>你可能觉得自己有个特别的目的或任务要完成，即使你可能不知道是什么目的。当你发现自己对个人价值的内在观感很少取得外界认同时，你可能感到自我怀疑。然而尽管艰苦或缺乏他人的支持，你仍然受到内在强大的力量驱策自己继续寻求、实现更高的目的。</span></p>
+
+<p class=a3><span style='font-family:宋体'>由于物质世界的浓密度经常阻碍你忆起自己是谁和自己的更高目的，许多人因此迷失在自我批判和怀疑中。很多人因为缺乏自信和过于谦逊而失去实现更高目的的能力。相信自己的梦想非常重要，梦想显现你的特殊目的。如果你还没发现自己的更高目的，信任自己从事的每件事物都引领你迈向更高目的之道途。当你持续成长，你将会更清楚觉察自己的独特目的。</span></p>
+
+<p class=a3><span style='font-family:宋体'>每个人天生具有一个特殊的目的，一个无可取代的独特角色。你们选择担任变动的前锋，建立超意识实相的新型态。许多人转向可以自由设计、完成自己理念的自营业、工作室；或是担任公司可以影响决策的职位。</span></p>
+
+<p class=a4><span style='font-family:宋体'>你走在时代的前端</span></p>
+
+<p class=a3><span style='font-family:宋体'>你们掌握人类未来的愿景。你可能对于自己异于他人的想法或有时觉得自己不能与他人融合一致，感到奇怪。这是因为你部分的思维和想法，在此时仍不普遍、不寻常，却是带向即将来临的更高意识转变之思维。你可能被吸引至生态环境、和平运动、科学、科技、心理学、形而上学或其它有益人类新愿景的领域中。</span></p>
+
+<p class=a3><span style='font-family:宋体'>想象自己正在登山，有许多人走在你前面，也有很多人跟在后面。现在想象前面的人转向你，送给你光、爱、能量和照亮你的道路，使你的旅程更轻松。你对自己的路途更清晰、步伐更坚定，你能够更快速的攀登。现在想象你转向后方的人，传送出光和智慧，传达自己一路走来的知识与鼓舞。</span></p>
+
+<p class=a3><span style='font-family:宋体'>你的灵性之旅并不孤单，你的实相和更高层面中无数的灵魂早已出发，为你照亮路途。当你成长，你也同样会帮助他人更容易成长。只要你踏上成长之路，总会获得无数的光和帮助。</span></p>
+
+<p class=a3><span style='font-family:宋体'>在你一步之后，成千上万人正在觉醒。回想来到成长之路前的自己。此刻有非常多的人正面临觉醒时刻，他们可能还不知道该转向何方或寻求何种讯息；他们可能才刚开始疑问、聆听。当你消除迷障迈向自己的道途与真理，你将会伸手帮助他们；他们也会依序协助随后者。</span></p>
+
+<p class=a4><span style='font-family:宋体'>人类正在进化跳跃的过程</span></p>
+
+<p class=a3><span style='font-family:宋体'>你的能量体正在进化，当你灵性成长，你的灵光会增加灵性微光（</span><span
+lang=EN-US>shimmer</span><span style='font-family:宋体'>）的新能量。由于新人类将会具有能够以更高的频率振动而绽放光的光体，你、你的下一代、下下一代将带来远超乎目前你能想象的意识转化。</span></p>
+
+<p class=a3><span style='font-family:宋体'>如今你专注致力的特质：充满爱、信任自己、宽恕、慈悲和释放痛苦与负面消极，在人类能量系统更进化的未来将会更容易。人类将具备完整的光体，成为发光源。</span></p>
+
+<p class=a3><span style='font-family:宋体'>许多人希望此生是你们在地球上的最后一世。当你们说「最后一世」，彷佛这是灵魂的终极目标。当你达到地球生命高又更高层面的大师阶段，你可以选择死后是否重返人间。地球是个美丽的地方，当你成为更高意识的大师，你能够在地球体验天堂。很多可以选择生活在其它层面的高度进化灵魂，因为对人类、地球的爱而选择在此生活。更高层面的大师提升你助人成长的能力，并由你的服务增进自我成长的机会。</span></p>
+
+<p class=a3><span style='font-family:宋体'>你并非由于自己太「低」不足以生活在较高层面而降生地球。你的大我把自己的一部份：你，送到这个次元，学习在物质形体世界运用它的意识。相信自己在此是由于这是提供你最大进化契机的最佳地方。当你扩展、成长，你的大我亦如此。兼爱你的人性和神性。你的日常生活经验：挑战、情感和关系，正是你来此学习的舞台。</span></p>
+
+<p class=a3><span style='font-family:宋体'>你的思想、情感和一切人性，提供你无比丰盛的成长机会和成为他人的光源。当你更充满光，你协助全人类达到「决定性的多数」（</span><span
+lang=EN-US>critical mass</span><span style='font-family:宋体'>）。当足够多的人绽放和保持强大的光，所有的人将会一同达到量子跳跃，进入新进化的阶段。更多的人扩展，更容易成为大我、达到开悟。更多人学习保持和绽放更多光，更有机会帮助他人发挥此生的最大潜能。</span></p>
+
+<b><span lang=EN-US style='font-size:18.0pt;font-family:DFKai-SB'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<p class=a5><span style='font-family:宋体'>成为光源</span></p>
+
+<p class=a6><span style='font-family:宋体'>冥想</span></p>
+
+<p class=10><span style='font-family:宋体'>这个冥想的目的是揭开无明的面纱。帮助你忆起自己是谁，以无限的视野看待自己。</span></p>
+
+<p class=a3><span style='font-family:宋体'>这是一个很简单，却奥妙的过程。你可以请一位朋友问你以下问题；在内心自问；或录成录音带，保留让自己回答的时间。如果是自己一个人，你可以在心中回答问题；说出来录在录音带；或写下记录。</span></p>
+
+<p class=a7><span style='font-family:宋体'>步骤：</span><span style='font-family:
+宋体;font-weight:normal'>进入你的大我状态进行这个冥想练习。</span></p>
+
+<p class=a8><span lang=EN-US>1.</span><span lang=EN-US>&nbsp;&nbsp; </span><span
+style='font-family:宋体'>安静坐下，放松身体，闭上眼睛，深呼吸。你的思维专注而清晰；情绪平和而宁静，自问：</span></p>
+
+<p class=a9 style='margin-left:48.0pt;text-indent:-12.0pt'><span lang=EN-US>a</span><span
+lang=EN-US>&nbsp; </span><span style='font-family:宋体'>我是谁？（如果你问朋友，问「你是谁？」）</span></p>
+
+<p class=a9 style='margin-left:48.0pt;text-indent:-12.0pt'><span lang=EN-US>b</span><span
+lang=EN-US>&nbsp; </span><span style='font-family:宋体'>我从哪来？（如果你问朋友，问「你从哪来？」</span><span
+lang=EN-US style='font-family:PMingLiU'>)</span></p>
+
+<p class=a9 style='margin-left:48.0pt;text-indent:-12.0pt'><span lang=EN-US>c</span><span
+lang=EN-US>&nbsp; </span><span style='font-family:宋体'>我为何在此？（如果你问朋友，问「你为何在此？」）</span></p>
+
+<p class=MsoNormal style='margin-top:15.6pt;margin-right:0cm;margin-bottom:
+9.3pt;margin-left:36.0pt'><span style='font-family:宋体;color:windowtext'>每次问这些问题时，加重音在不同的字眼，例如：你可以第一次问：「<b><u>我</u></b>是谁？」；第二次：「我<b><u>是</u></b>谁？」；第三次：「我是<b><u>谁</u></b>？」。依序重复数次，尽可能保持想象力、游戏心态和创造力回答。</span></p>
+
+<p class=MsoNormal style='margin-top:15.6pt;text-indent:12.0pt'><span
+lang=EN-US>2. </span><span style='font-family:宋体'>随心所欲的玩味练习。当你回神返回房间，记得刚才接收的内在启示，或记录下来。</span></p>
+
+</div>
+
+</body>
+
+
+<!-- Mirrored from www.shuimo.com/orin/Orin4/orin415.htm by HTTrack Website Copier/3.x [XR&CO'2006], Thu, 07 Sep 2006 14:06:37 GMT -->
+</html>
