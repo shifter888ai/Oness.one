@@ -1,0 +1,6 @@
+# Keep project governance and repository metadata out of the public website.
+ /.gitignore
+/AUDIT.md
+/BACKLOG.md
+/MASTER-RULES.md
+/wrangler.jsonc
