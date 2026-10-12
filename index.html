@@ -11,6 +11,17 @@
 .auto-style2 {
 	font-family: Arial, Helvetica, sans-serif;
 }
+
+#back-to-top {
+  position: fixed; right: 14px; bottom: 14px; z-index: 9998;
+  width: 44px; height: 44px; border: 1px solid #888; border-radius: 50%;
+  background: #f2f2f2; color: #222; font: 24px/1 Arial, Helvetica, sans-serif;
+  cursor: pointer; box-shadow: 0 2px 7px rgba(0,0,0,.18);
+  display: none; align-items: center; justify-content: center;
+}
+body.dark-mode #back-to-top { background: #303030; color: #f2f2f2; border-color: #777; }
+#back-to-top:focus-visible { outline: 3px solid #4d90fe; outline-offset: 3px; }
+
 </style>
 
 
@@ -45,6 +56,15 @@ body.dark-mode hr { border-color: #555; }
     var saved = null;
     try { saved = localStorage.getItem('oness-theme'); } catch (e) {}
     applyTheme(saved === 'dark' ? 'dark' : 'light');
+    var topButton = document.getElementById('back-to-top');
+    function updateTopButton() {
+      topButton.style.display = (window.scrollY > 180) ? 'flex' : 'none';
+    }
+    window.addEventListener('scroll', updateTopButton, { passive: true });
+    updateTopButton();
+    topButton.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
     var button = document.getElementById('theme-toggle');
     button.addEventListener('click', function () {
       var next = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
@@ -59,6 +79,7 @@ body.dark-mode hr { border-color: #555; }
 
 <body text="#666666">
 <button id="theme-toggle" type="button">☾ Dark mode</button>
+<button id="back-to-top" type="button" aria-label="Return to top" title="Return to top">↑</button>
 
 
 <div align="center">
