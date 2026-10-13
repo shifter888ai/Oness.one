@@ -19,6 +19,7 @@
       "#theme-toggle { position: fixed; top: 12px; right: 12px; z-index: 9999; width: 38px; height: 38px; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #f2f2f2; color: #222; font: 20px/1 Arial, Helvetica, sans-serif; }",
       "body.oness-dark-mode #theme-toggle, body.oness-dark-mode #back-to-top { background: #303030; color: #f2f2f2; border-color: #777; }",
       "#back-to-top { position: fixed; right: 14px; bottom: 14px; z-index: 9998; width: 44px; height: 44px; border-radius: 50%; background: #f2f2f2; color: #222; font: 24px/1 Arial, Helvetica, sans-serif; display: none; align-items: center; justify-content: center; }",
+      "#back-to-top svg { width: 22px; height: 22px; display: block; }",
       "#theme-toggle:focus-visible, #back-to-top:focus-visible { outline: 3px solid #4d90fe; outline-offset: 3px; }",
       "@media (prefers-reduced-motion: reduce) { body { transition: none; } }"
     ].join("\n");
@@ -44,6 +45,10 @@
       topButton.textContent = "↑";
       document.body.appendChild(topButton);
     }
+    // Use an inline SVG icon instead of a text glyph, so legacy page encodings
+    // cannot turn the return-to-top control into corrupted characters.
+    topButton.textContent = "";
+    topButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
     function applyTheme(theme) {
       document.body.classList.toggle("oness-dark-mode", theme === "dark");
