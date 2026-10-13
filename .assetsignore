@@ -6,3 +6,9 @@
 /wrangler.jsonc
 /worker.js
 /.github/**
+/.git
+/.git/**
+/node_modules
+/node_modules/**
+/.wrangler
+/.wrangler/**
