@@ -4,9 +4,9 @@
     var button = document.createElement("button");
     button.id = "oness-zh-toggle";
     button.type = "button";
-    button.textContent = "简 / 繁";
+    button.textContent = "简";
     button.title = "简体中文 / 繁體中文";
-    button.style.cssText = "position:fixed;top:12px;right:150px;z-index:99999;padding:8px 11px;border:1px solid #888;border-radius:999px;background:#f2f2f2;color:#222;font:14px Arial,sans-serif;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.16)";
+    button.style.cssText = "position:fixed;top:12px;right:60px;z-index:99999;width:38px;height:38px;padding:0;display:flex;align-items:center;justify-content:center;border:1px solid #888;border-radius:50%;background:#f2f2f2;color:#222;font:20px Arial,sans-serif;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.16)";
     var saved = [];
     var isTraditional = false;
     var convert = null;
@@ -28,14 +28,14 @@
       s.src = "https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.js";
       s.onload = function () {
         if (!window.OpenCC || !window.OpenCC.Converter) {
-          button.textContent = "简 / 繁 ⚠";
+          button.textContent = "简";
           busy = false; button.disabled = false; return;
         }
         convert = window.OpenCC.Converter({ from: "cn", to: "tw" });
         done();
       };
       s.onerror = function () {
-        button.textContent = "简 / 繁 ⚠";
+        button.textContent = "简";
         button.title = "转换库加载失败，请检查网络连接";
         busy = false; button.disabled = false;
       };
@@ -46,7 +46,7 @@
       if (isTraditional) {
         saved.forEach(function (x) { if (x.node.isConnected) x.node.nodeValue = x.text; });
         isTraditional = false;
-        button.textContent = "简 / 繁";
+        button.textContent = "简";
         button.title = "简体中文 / 繁體中文";
         return;
       }
@@ -55,7 +55,7 @@
         saved = nodes().map(function (n) { return { node: n, text: n.nodeValue }; });
         saved.forEach(function (x) { x.node.nodeValue = convert(x.text); });
         isTraditional = true;
-        button.textContent = "恢复简体";
+        button.textContent = "繁";
         button.title = "点击恢复原始简体中文";
         busy = false; button.disabled = false;
       });
