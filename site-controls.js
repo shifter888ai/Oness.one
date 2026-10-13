@@ -16,9 +16,10 @@
       "body.oness-dark-mode a { color: #9ecbff !important; }",
       "body.oness-dark-mode hr { border-color: #555 !important; }",
       "#theme-toggle, #back-to-top { border: 1px solid #888; box-shadow: 0 1px 4px rgba(0,0,0,.16); cursor: pointer; }",
-      "#theme-toggle { position: fixed; top: 12px; right: 12px; z-index: 9999; width: 38px; height: 38px; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #f2f2f2; color: #222; font: 20px/1 Arial, Helvetica, sans-serif; }",
+      "#theme-toggle { position: fixed; top: 12px; right: 12px; z-index: 9999; width: 38px; height: 38px; padding: 0; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #f2f2f2; color: #222; }",
       "body.oness-dark-mode #theme-toggle, body.oness-dark-mode #back-to-top { background: #303030; color: #f2f2f2; border-color: #777; }",
-      "#back-to-top { position: fixed; right: 14px; bottom: 14px; z-index: 9998; width: 44px; height: 44px; border-radius: 50%; background: #f2f2f2; color: #222; font: 24px/1 Arial, Helvetica, sans-serif; display: none; align-items: center; justify-content: center; }",
+      "#theme-toggle svg { width: 21px; height: 21px; display: block; }",
+      "#back-to-top { position: fixed; right: 14px; bottom: 14px; z-index: 9998; width: 44px; height: 44px; border-radius: 50%; background: #f2f2f2; color: #222; display: none; align-items: center; justify-content: center; }",
       "#back-to-top svg { width: 22px; height: 22px; display: block; }",
       "#theme-toggle:focus-visible, #back-to-top:focus-visible { outline: 3px solid #4d90fe; outline-offset: 3px; }",
       "@media (prefers-reduced-motion: reduce) { body { transition: none; } }"
@@ -40,22 +41,21 @@
       topButton = document.createElement("button");
       topButton.id = "back-to-top";
       topButton.type = "button";
-      topButton.setAttribute("aria-label", "Return to top");
-      topButton.title = "Return to top";
-      topButton.textContent = "↑";
       document.body.appendChild(topButton);
     }
-    // Use an inline SVG icon instead of a text glyph, so legacy page encodings
-    // cannot turn the return-to-top control into corrupted characters.
-    topButton.textContent = "";
+    topButton.setAttribute("aria-label", "Return to top");
+    topButton.title = "Return to top";
     topButton.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
     function applyTheme(theme) {
       document.body.classList.toggle("oness-dark-mode", theme === "dark");
       document.body.classList.toggle("dark-mode", theme === "dark");
       document.documentElement.style.colorScheme = theme;
-      themeButton.textContent = theme === "dark" ? "☀" : "☾";
+      themeButton.innerHTML = theme === "dark"
+        ? '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'
+        : '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
       themeButton.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+      themeButton.title = theme === "dark" ? "Switch to light mode" : "Switch to dark mode";
     }
 
     var saved = null;
